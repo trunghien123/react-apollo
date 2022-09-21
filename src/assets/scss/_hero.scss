@@ -1,0 +1,100 @@
+.list-hero {
+  display: flex;
+  // justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  .hero {
+    img {
+      max-width: 300px;
+      height: 200px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    &_card {
+      display: block;
+      position: relative;
+      &:hover {
+        .hero_card-delete {
+          display: block;
+          animation: opacity 0.3s linear;
+        }
+      }
+      &-delete {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        padding: 10px;
+        background: linear-gradient(to bottom, #ffffff4f, #dbf7b1);
+        width: 100%;
+        text-align: center;
+        animation: opacity 0.3s linear;
+        img {
+          width: 20px;
+          height: 20px;
+          fill: red;
+        }
+      }
+    }
+  }
+}
+.hero-item {
+  padding: 20px;
+  &_content {
+    max-width: 400px;
+    img {
+      width: 100%;
+    }
+    p {
+      margin: 0;
+    }
+    &-infor {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      svg {
+        cursor: pointer;
+      }
+      .liked {
+        fill: rgb(161, 161, 161);
+      }
+      .like {
+        text-align: center;
+      }
+    }
+  }
+}
+.modal-add-new {
+  width: 600px;
+}
+.modal-confirm {
+    padding: 40px 0;
+    p {
+        font-size: 22px;
+        text-align: center;
+    }
+    .modal-buttons {
+        text-align: center;
+        button {
+            min-width: 90px;
+            &:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}

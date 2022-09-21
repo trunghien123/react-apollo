@@ -1,0 +1,13 @@
+.pokemon{
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+@import './hero';
+@import './header';
+@import './auth';
+@import './profile';

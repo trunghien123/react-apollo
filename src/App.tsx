@@ -5,6 +5,7 @@ import SignUp from './auth/signUp';
 import Header from './component/header';
 import HeroDetail from './component/heroDetail';
 import MyProfile from './component/profile';
+import Snow from './component/snow';
 import Layout from './containers';
 import PrivateRoute from './containers/privateRoute';
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <Snow></Snow>
         <Header></Header>
         <Routes>
           <Route path='/' element={<Layout />}></Route>
@@ -21,7 +23,7 @@ function App() {
           <Route path='/my-profile' element={<PrivateRoute />}>
             <Route path='/my-profile' element={<MyProfile />}></Route>
           </Route>
-          <Route path="*" element={ <Navigate to="/" /> }></Route>
+          <Route path="*" element={<Navigate to="/" />}></Route>
         </Routes>
       </BrowserRouter>
     </>
